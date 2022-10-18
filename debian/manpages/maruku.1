@@ -1,0 +1,105 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH MARUKU 1 "May 27, 2007"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+maruku \- converts markdown files to various output
+.SH SYNOPSIS
+
+.B maruku 
+.I [options] [file1.md [file2.md ...]]
+
+
+.SH DESCRIPTION
+
+.B maruku 
+is a markdown interpreter: it accepts files written in the
+markdown language and transforms them into HTML, TeX of PDF (using
+pdflatex). If no file is given on the command-line, 
+.B maruku
+acts as a filter and converts standard input to standard output.
+
+.PP
+
+.SH OPTIONS
+
+.TP
+\fB\-v\fR, \fB\-\-[no\-]verbose\fR
+Run verbosely
+.TP
+\fB\-u\fR, \fB\-\-[no\-]unsafe\fR
+Use unsafe features
+.TP
+\fB\-b\fR
+Break on error
+.TP
+\fB\-i\fR, \fB\-\-math\-images\fR ENGINE
+Uses ENGINE to render TeX to PNG.
+.TP
+\fB\-m\fR, \fB\-\-math\-engine\fR ENGINE
+Uses ENGINE to render MathML
+.TP
+\fB\-o\fR, \fB\-\-output\fR FILE
+Output filename
+.TP
+\fB\-\-pdf\fR
+Creates PDF output using pdflatex. Please see the 
+.B NOTE
+below.
+.TP
+\fB\-\-s5\fR
+Write S5 slideshow
+.TP
+\fB\-\-html\fR
+Write HTML output.
+.TP
+\fB\-\-html\-frag\fR
+Write the contents of the BODY.
+.TP
+\fB\-\-tex\fR
+Write LaTeX
+.TP
+\fB\-\-inspect\fR
+Shows the parsing result
+.TP
+\fB\-\-version\fR
+Show version
+
+.SH SEE ALSO
+.BR marutex (1)
+.BR pdflatex (1).
+
+.SH NOTE
+
+An important note for debian users: to prevent a lightweight library
+such as 
+.I libmaruku-ruby 
+to pull in heavy dependencies like 
+.IR texlive ,
+.I libmaruku-ruby
+does not depend on 
+.I texlive 
+(but only recommends it). This means that
+if you do not install 
+.IR texlive , 
+you will not have PDF output.
+
+
+.SH AUTHOR
+maruku was written by Andrea Censi <andrea@rubyforge.org>.
+.PP
+This manual page was written by Vincent Fourmond <fourmond@debian.org>,
+for the Debian project (but may be used by others).

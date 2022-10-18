@@ -1,0 +1,103 @@
+ruby-maruku (0.7.3-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 0.7.3
+  * Move debian/watch to gemwatch.debian.net
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.2.0 (no changes needed)
+  * Use salsa.debian.org in Vcs-* fields
+
+ -- Cédric Boutillier <boutil@debian.org>  Sun, 19 Aug 2018 04:14:49 +0200
+
+ruby-maruku (0.7.2-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Christian Hofstaedtler ]
+  * Remove obsolete d/require-rubygems.overrides
+
+  [ Cédric Boutillier ]
+  * Imported Upstream version 0.7.2
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.8 (no changes needed)
+  * Remove paragraph about removed file rubypants.rb in copyright
+  * Run wrap-and-sort on packaging files
+  * Set Testsuite to autopkgtest-pkg-ruby
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 07 Jul 2016 08:45:17 +0200
+
+ruby-maruku (0.7.1-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Cédric Boutillier ]
+  * debian/control:
+    - remove obsolete DM-Upload-Allowed flag
+    - use canonical URI in Vcs-* fields
+
+  [ Jonas Genannt ]
+  * Imported Upstream version 0.7.1
+  * d/control:
+    - removed transitional packages (Closes: #735704)
+    - bumped standards version to 3.9.5 (no changes needed)
+    - added ruby-nokogiri as depend
+    - updated build-deps for running tests on build time
+    - removed unneeded dot in description
+  * d/rules: marutest and marudown no longer included by upstream
+  * d/copyright: updated to copyright format 1.0
+  * d/README.Debian: update package name, update README
+  * install xml file; added patch to fix path to xml in Debian
+  * d/ruby-tests.rake: added buildtime tests. exclude block_spec.rb
+    since nokogiri/diff is not available in Debian yet
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Fri, 21 Feb 2014 22:53:11 +0100
+
+ruby-maruku (0.6.0-2) unstable; urgency=low
+
+  * Force a rebuild with newer gem2deb
+  * Conforms to standards 3.9.3
+  * Move transitional packages to Priority: extra
+
+ -- Vincent Fourmond <fourmond@debian.org>  Sun, 24 Jun 2012 01:46:12 +0200
+
+ruby-maruku (0.6.0-1) unstable; urgency=low
+
+  * New upstream release, now based on the gem file
+  * Switch to gem2deb + debhelper
+  * Rename source and binary packages according to the Ruby policy and
+    provide transition packages
+
+ -- Vincent Fourmond <fourmond@debian.org>  Mon, 06 Jun 2011 16:01:29 +0200
+
+libmaruku-ruby (0.5.8-1) unstable; urgency=low
+
+  * New upstream release
+  * Bumped to Standards version 3.7.3 (no changes needed)
+  * Removed unecessary debian/dirs, so now we are lintian-clean
+
+ -- Vincent Fourmond <fourmond@debian.org>  Fri, 04 Apr 2008 19:01:41 +0200
+
+libmaruku-ruby (0.5.7-1) unstable; urgency=high
+
+  * New upstream release (Closes: #447605)
+  * Urgency high as it fixes a grave bug in testing
+
+ -- Vincent Fourmond <fourmond@debian.org>  Mon, 22 Oct 2007 20:16:27 +0200
+
+libmaruku-ruby (0.5.6-2) unstable; urgency=low
+
+  * Uploading to unstable
+
+ -- Vincent Fourmond <fourmond@debian.org>  Tue, 10 Jul 2007 21:39:05 +0200
+
+libmaruku-ruby (0.5.6-1) experimental; urgency=low
+
+  * Initial release (Closes: #426162)
+  * Added a manpage for maruku and marutex
+  * Added a linda override for the example changelog.md
+  * Uploading to experimental.
+  * Add 01-fix-shebang to fix shebangs of executables
+
+ -- Vincent Fourmond <fourmond@debian.org>  Sun, 27 May 2007 14:40:45 +0200

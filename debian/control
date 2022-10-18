@@ -1,0 +1,31 @@
+Source: ruby-maruku
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Vincent Fourmond <fourmond@debian.org>
+Build-Depends: debhelper (>= 11~),
+               gem2deb,
+               ruby-json,
+               ruby-nokogiri,
+               ruby-rspec,
+               ruby-simplecov
+Standards-Version: 4.2.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-maruku.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-maruku
+Homepage: http://maruku.rubyforge.org
+XS-Ruby-Versions: all
+Testsuite: autopkgtest-pkg-ruby
+
+Package: ruby-maruku
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-nokogiri,
+         ${misc:Depends}
+Description: Markdown-superset interpreter written in Ruby
+ Maruku implements a superset of the Markdown language, designed to
+ easily create HTML documents while only focusing on the high-level
+ structure and not the details. Maruku also supports LaTeX export,
+ which means you can produce PDF output.
+ .
+ Maruku prides itself of being decently fast on long documents.

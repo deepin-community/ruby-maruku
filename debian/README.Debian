@@ -1,0 +1,6 @@
+ruby-maruku does not Depends on the Ruby syntax library (for syntax
+highlighting), as at the time of the writing, this library has not
+yet been packaged for Debian.
+
+This will however not prevent you from using maruku (without syntax
+highlighting).

@@ -1,0 +1,15 @@
+Description: change path to xml for debian installation
+Author: Jonas Genannt <jonas.genannt@capi2name.de>
+Forwarded: not-needed
+
+--- a/lib/maruku/output/entity_table.rb
++++ b/lib/maruku/output/entity_table.rb
+@@ -11,7 +11,7 @@
+     def initialize
+       @entity_table = {}
+ 
+-      xml = File.new(File.join(File.dirname(__FILE__), '..', '..', '..', 'data', 'entities.xml'))
++      xml = File.new('/usr/share/ruby-maruku/entities.xml')
+       doc = REXML::Document.new(xml)
+       doc.elements.each("//char") do |c|
+         num = c.attributes['num'].to_i
